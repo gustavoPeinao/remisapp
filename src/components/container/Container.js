@@ -5,6 +5,7 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import Header from '../header/Header';
 import Home from '../body/home/Home';
 
+// import Ingenieria from '../body/ingenieria/Ingenieria';
 
 
 
@@ -23,7 +24,7 @@ class Container extends React.Component {
                     <Switch>
 
                         <Route path="/" component={Home} exact />
-                        
+                        {/* <Route path="/ingenieria" component={Ingenieria} exact /> */}
                         
                     </Switch>
                 </HashRouter>

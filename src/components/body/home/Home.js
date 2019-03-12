@@ -1,63 +1,46 @@
 import * as React from 'react';
-import { Link, BrowserRouter as Router } from "react-router-dom";
+
 import {  MDBCol } from "mdbreact";
-import './home.css'; 
 
 
-import api from '../../../choferes.json'
+import { choferes } from '../../../choferes.json'
 
-
-function searchingFor(term){
-  return function (x){
-    return x.first.toLowerCase().includes(term.toLowerCase()) || !term;
-    
-  }
-}
 class Home extends React.Component {
-  constructor(props){
-    super(props);
+  
+  constructor(){
+    super();
+    this.state ={
+      choferes,
+      nameValue:''
+    }
+    this.onChange = this.onChange.bind(this)
+  }
 
-      this.state={
-        choferes:api,
-        term:'',
-      }
-      this.searchHandler = this.searchHandler.bind(this);
+  onChange(x){
+    console.log(x.target.value);
+    // this.setState(term)=x.target.value;
+    [x.target.name]= x.target.value;
   }
   
-  searchHandler(event){
-    this.setState({term: event.target.value})
-  }
-
-    render() {
-      const {term, choferes} = this.state;
-      
-      
+    render() {   
+    // const x = (nombrex.target.value)
+    // console.log(x)
       return (
-        
-          <div>
-            <MDBCol md="6">
-              <input className="form-control" type="text" onChange={this.searchHandler} value={term} placeholder="Buscar chofer" aria-label="Search" />
-            </MDBCol>
+        <div>
+          <MDBCol md="3">
+            <h2>Lista de choferes</h2>
+            <input className="form-control" onChange={this.onChange} type="text" name="nameValue" placeholder="Buscar chofer" aria-label="Search" />
             
-              <h2>Lista de choferes</h2>
-              {api.choferes.filter(searchingFor(term)).map(chofer => (
-                <div key={chofer.id}>
-                  <li>
-                      <h4>{chofer.nombre}</h4> 
-                  </li>
-                </div>
-              ))}
-            
-              
-            {this.props.choferes}
-          </div>
-          
-
-               
-
-
-            
-        )
+              {choferes.map((chofer, i) => {
+                return <div>
+                    <p>
+                      {chofer.nombre}
+                    </p>
+                  </div>
+              })}
+          </MDBCol>
+        </div>         
+        );
     }
 }
 

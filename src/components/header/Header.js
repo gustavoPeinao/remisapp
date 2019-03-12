@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
-    MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
 
 // import logoNav from './logoNav.png';
  

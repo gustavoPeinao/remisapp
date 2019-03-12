@@ -1,0 +1,33 @@
+.miBoton {
+    /* background: -webkit-linear-gradient(#FF21DD, #8F60E5); */
+    background: white;
+    color: #00c2ae;
+    border-radius: 150px;
+    border: 3px #00c2ae outset;
+    width: 100%;
+}
+/* stiles portada */
+.apppage .gradient {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    }
+    
+    .apppage .view {
+        background-image: url('rectorado.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+    }
+    
+    .apppage h6 {
+    line-height: 1.7;
+    }
+
+    .sombra{
+        -webkit-filter: drop-shadow(20px 20px 20px rgb(41, 41, 41));
+        filter: drop-shadow(20px 20px 20px rgb(41, 41, 41)); 
+    }
